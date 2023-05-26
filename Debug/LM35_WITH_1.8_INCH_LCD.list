@@ -3807,7 +3807,7 @@ int main(void)
   ST7735_Init(0);
  8001c5e:	2000      	movs	r0, #0
  8001c60:	f7ff fd56 	bl	8001710 <ST7735_Init>
-  fillScreen(CYAN);
+  fillScreen(YELLOW);
  8001c64:	4b27      	ldr	r3, [pc, #156]	; (8001d04 <main+0xc0>)
  8001c66:	0018      	movs	r0, r3
  8001c68:	f7ff fc10 	bl	800148c <fillScreen>
@@ -3870,14 +3870,14 @@ int main(void)
  8001cd2:	2b18      	cmp	r3, #24
  8001cd4:	d9ca      	bls.n	8001c6c <main+0x28>
 				  {
-				  sprintf(buffer, "Pixel    Tempnow: %d'C", tcelsius);
+				  sprintf(buffer, "Pixel    Temp now: %d'C", tcelsius);
  8001cd6:	4b12      	ldr	r3, [pc, #72]	; (8001d20 <main+0xdc>)
  8001cd8:	681a      	ldr	r2, [r3, #0]
  8001cda:	4912      	ldr	r1, [pc, #72]	; (8001d24 <main+0xe0>)
  8001cdc:	003b      	movs	r3, r7
  8001cde:	0018      	movs	r0, r3
  8001ce0:	f002 f9e0 	bl	80040a4 <siprintf>
-				  ST7735_WriteString(1, 1, &buffer, Font_16x26, BLACK ,CYAN);
+				  ST7735_WriteString(1, 1, &buffer, Font_16x26, BLACK ,YELLOW);
  8001ce4:	4b10      	ldr	r3, [pc, #64]	; (8001d28 <main+0xe4>)
  8001ce6:	0038      	movs	r0, r7
  8001ce8:	4a06      	ldr	r2, [pc, #24]	; (8001d04 <main+0xc0>)
@@ -3894,7 +3894,7 @@ int main(void)
  8001cfe:	f7ff fe5f 	bl	80019c0 <ST7735_WriteString>
 	          HAL_ADC_Start(&hadc);
  8001d02:	e7b3      	b.n	8001c6c <main+0x28>
- 8001d04:	000007ff 	.word	0x000007ff
+ 8001d04:	0000ffe0 	.word	0x0000ffe0
  8001d08:	200000a0 	.word	0x200000a0
  8001d0c:	20000154 	.word	0x20000154
  8001d10:	26394fad 	.word	0x26394fad

@@ -95,7 +95,7 @@ int main(void)
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
   ST7735_Init(0);
-  fillScreen(CYAN);
+  fillScreen(YELLOW);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -114,8 +114,8 @@ int main(void)
 				  char buffer[16];
 				  if(tcelsius<=45&&tcelsius>=25)
 				  {
-				  sprintf(buffer, "Pixel    Tempnow: %d'C", tcelsius);
-				  ST7735_WriteString(1, 1, &buffer, Font_16x26, BLACK ,CYAN);
+				  sprintf(buffer, "Pixel    Temp now: %d'C", tcelsius);
+				  ST7735_WriteString(1, 1, &buffer, Font_16x26, BLACK ,YELLOW);
 				  }
 			   }
   }
